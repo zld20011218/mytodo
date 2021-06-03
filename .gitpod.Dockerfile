@@ -1,18 +1,13 @@
 FROM gitpod/workspace-full
 
-USER gitpod
+USER root
 
 # Install custom tools, runtime, etc.
 
 ARG DEBIAN_FRONTEND=noninteractive
-RUN sudo apt -qq install zsh
-RUN sudo apt -qq install git
-RUN sudo apt -qq install netcat
-RUN sudo apt -qq install nmap
-RUN sudo apt -qq install vim
-RUN sudo apt -qq install tldr
-RUN sudo apt autoremove
-RUN sudo apt autoclean
+RUN apt install -y zsh git netcat nmap vim tldr && apt autoremove && apt autoclean
+
+USER gitpod
 
 # set the zsh theme 
 ENV ZSH_THEME cloud

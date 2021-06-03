@@ -3,10 +3,12 @@ FROM gitpod/workspace-full:latest
 USER root
 
 # Install custom tools, runtime, etc.
-RUN ["apt-get", "update"]
+# RUN ["apt-get", "update"]
 
-RUN ["apt-get", "install", "-y", "apt-utils"]
-RUN ["apt-get", "install", "-y", "zsh", "vim", "netcat", "nmap", "tldr"]
+# RUN ["apt-get", "install", "-y", "apt-utils"]
+# RUN ["apt-get", "install", "-y", "zsh", "vim", "netcat", "nmap", "tldr"]
+
+RUN brew install zsh vim netcat nmap tldr
 
 USER gitpod
 

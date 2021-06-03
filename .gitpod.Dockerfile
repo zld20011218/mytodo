@@ -3,8 +3,8 @@ FROM gitpod/workspace-full:latest
 USER root
 
 # Install custom tools, runtime, etc.
-RUN apt-get update &&
-    apt-get install -yq \
+RUN apt update \
+    && apt install -yq \
         apt-utils \
         neovim \
         asciidoctor \
@@ -20,13 +20,15 @@ RUN apt-get update &&
         multitail \
         zsh \
         git \
-        git-extras &&
-    locale-gen en_US.UTF-8 &&
-    apt-get clean &&
-    rm -rf /var/cache/apt/* &&
-    rm -rf /var/lib/apt/lists/* &&
-    rm -rf /tmp/*
+        git-extras \
+    && locale-gen en_US.UTF-8 \
+    && apt autoremove \
+    && apt autoclean \
+    && rm -rf /var/cache/apt/* \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /tmp/*
 ENV LANG=en_US.UTF-8
+
 
 
 USER gitpod

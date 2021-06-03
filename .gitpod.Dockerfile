@@ -5,7 +5,7 @@ USER root
 # Install custom tools, runtime, etc.
 
 ARG DEBIAN_FRONTEND=noninteractive
-RUN apt install -y zsh git netcat nmap vim tldr && apt autoremove && apt autoclean
+RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y zsh git netcat nmap vim tldr && apt autoremove -y && apt autoclean -y
 
 USER gitpod
 

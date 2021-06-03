@@ -4,6 +4,7 @@ USER gitpod
 
 # Install custom tools, runtime, etc.
 RUN brew install zsh git netcat nmap vim tldr
+RUN brew postinstall perl
 
 # set the zsh theme 
 ENV ZSH_THEME cloud

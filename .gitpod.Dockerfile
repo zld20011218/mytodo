@@ -4,8 +4,13 @@ USER root
 
 # Install custom tools, runtime, etc.
 
+# apt gives beautiful output for human reading so being preferred in the terminal.
+# apt-get does not give as nice outputs as apt but works great in scripts.
+# Since Dockerfile is kind of scripts, Docker recommends us to directly use the apt-get for installing sort of stuff.
+# Here you can get an inference.
+# https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
 ARG DEBIAN_FRONTEND=noninteractive
-RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y zsh git netcat nmap vim tldr && apt autoremove -y && apt autoclean -y
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y zsh git netcat nmap vim tldr && apt-get autoremove -y && apt-get autoclean -y
 
 USER gitpod
 

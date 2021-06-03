@@ -3,7 +3,7 @@ FROM gitpod/workspace-full
 USER gitpod
 
 # Install custom tools, runtime, etc.
-RUN brew zsh git netcat nmap vim
+RUN brew install zsh git netcat nmap vim
 
 # set the zsh theme 
 ENV ZSH_THEME cloud

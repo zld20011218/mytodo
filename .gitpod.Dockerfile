@@ -27,6 +27,9 @@ RUN apt update \
     && rm -rf /tmp/*
 ENV LANG=en_US.UTF-8
 
+### Set zsh as default shell ###
+RUN chsh gitpod -s /usr/bin/zsh
+
 USER gitpod
 
 # Install Oh-My-Zsh

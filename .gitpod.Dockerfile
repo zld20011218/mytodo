@@ -5,11 +5,8 @@ USER root
 # Install custom tools, runtime, etc.
 RUN ["apt-get", "update"]
 
-RUN ["apt-get", "install", "-y", "zsh"]
-RUN ["apt-get", "install", "-y", "vim"]
-RUN ["apt-get", "install", "-y", "netcat"]
-RUN ["apt-get", "install", "-y", "nmap"]
-RUN ["apt-get", "install", "-y", "tldr"]
+RUN ["apt-get", "install", "-y", "apt-utils"]
+RUN ["apt-get", "install", "-y", "zsh", "vim", "netcat", "nmap", "tldr"]
 
 USER gitpod
 
@@ -18,6 +15,8 @@ ENV ZSH_THEME cloud
 
 # Install Oh-My-Zsh
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
+
+RUN tldr --update
 
 # start zsh
 CMD [ "zsh" ]

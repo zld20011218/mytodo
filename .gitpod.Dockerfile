@@ -3,7 +3,14 @@ FROM gitpod/workspace-full
 USER gitpod
 
 # Install custom tools, runtime, etc.
-RUN brew install perl zsh git netcat nmap vim tldr
+RUN brew install perl
+RUN brew install zsh
+RUN brew install git
+RUN brew install netcat
+RUN brew install nmap
+RUN brew install vim
+RUN brew install tldr
+RUN brew cleanup
 
 # set the zsh theme 
 ENV ZSH_THEME cloud

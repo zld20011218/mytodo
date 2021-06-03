@@ -40,7 +40,8 @@ RUN sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/too
     && git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions \
     && git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search \
     && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-COPY zsh/nox.zsh-theme /home/gitpod/.oh-my-zsh/themes/
+    
+ENV ZSH_THEME cloud
 
 ### checks ###
 # no root-owned files in the home directory

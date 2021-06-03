@@ -11,3 +11,4 @@ vscode:
     - ritwickdey.liveserver
     - tabnine.tabnine-vscode
     - dbaeumer.vscode-eslint
+    - vscode.github

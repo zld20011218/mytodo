@@ -10,6 +10,7 @@ USER root
 # Here you can get an inference.
 # https://askubuntu.com/questions/990823/apt-gives-unstable-cli-interface-warning
 ARG DEBIAN_FRONTEND=noninteractive
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y apt-utils
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y zsh git netcat nmap vim tldr && apt-get autoremove -y && apt-get autoclean -y
 
 USER gitpod

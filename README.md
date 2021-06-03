@@ -9,7 +9,7 @@
 
 1. Fork 本项目: [2021-inclass-example / mytodo](https://github.com/2021-inclass-example/mytodo)
 
-1. 阅读教程并实践: [LET'S SCAFFOLD A WEB APP WITH YEOMAN](https://yeoman.io/codelab/index.html)
+1. 阅读教程并实践: [Canvas教程](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial)
 
 1. 用 Gitpod 打开项目并开始练习: https://gitpod.io#<你的项目仓库 URL>
 

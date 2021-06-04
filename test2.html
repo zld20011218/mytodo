@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+
+
+<head>
+    <meta charset="UTF-8" />
+    <title>My_image02</title>
+
+    <script>
+
+
+   function draw() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+
+    ctx.fillRect(25, 25, 1000, 1000);
+    ctx.clearRect(45, 45, 200, 200);
+    ctx.strokeRect(50, 50, 190, 190);
+    ctx.fillStyle = "orange";
+    ctx.strokeStyle = "orange";
+  }
+}
+
+    </script>
+
+
+
+</head>
+
+<body onload="draw();">
+    <h1>canvas02 基本图形</h1>
+    <canvas id="canvas" width="300" height="300"></canvas>
+</body>
+
+<html>
